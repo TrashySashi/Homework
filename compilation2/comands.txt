@@ -1,0 +1,35 @@
+Команди
+За задача 1:
+    -> предпроцесинг:
+        gcc -p zadacha1.c -o preprocessed1.c
+
+За задача 2:
+    -> изпълняване на първите две стъпки от компилирането:
+        gcc -s zadacha2.c -o assembly2.s
+
+За задача 3:
+    -> образуване на обектен файл от сорс файла transformation.c:
+        gcc -c transformation.c -o transformation.o
+    -> компилиране на main.c и съединяване с transformation.o:
+        gcc main.c transformation.o -o transformationmain.exe
+    -> компилиране:
+        ./transformationmain.exe
+
+За задача 4:
+    -> свързване на библиотеката по време на компилация:
+        gcc zadacha4.c -lm -o zadacha4.exe
+    -> компилиране:
+        ./zadacha4.exe
+
+За задача 5:
+    -> превръщане на maths.c в обектен файл:
+        gcc -c maths.c -o maths.o
+    -> превръщане на maths.c в статична библиотека:
+        ar rcs libmaths.a maths.o
+    -> свързване на библиотеката с main файла:
+        gcc main5.c -L. -lmaths -o main5.exe
+    -> компилиране:
+        ./main5.exe
+
+
+
